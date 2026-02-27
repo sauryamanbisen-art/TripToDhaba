@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sauryaman Bisen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="src/styles/dhabas.css">
+  <title>TripToDhaba</title>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm custom-nav">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+
+        <strong>『 TripToDhaba 』</strong>
+      </a>
+
+      <!-- Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2"><a class="nav-link active" href="#"><i class="bi bi-house-fill me-1"></i> Home</a>
+          </li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#"><i class="bi bi-geo-alt-fill"></i> Near Me</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#"><i class="bi bi-fork-knife"></i> Dhabas</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#"><i class="bi bi-gift-fill me-1"></i> Offers</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="#"><i class="bi bi-star-fill me-1"></i> Reviews</a></li>
+          <li class="nav-item mx-2">
+            <a class="nav-link btn-signin" href="#">
+              <i class="bi bi-person-circle me-1"></i> Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- SEARCH BAR + Location -->
+  <div class="container my-3">
+    <div class="search-bar d-flex align-items-center gap-2">
+
+      <a href="https://www.google.com/maps" target="_blank" class="location-btn">
+        <i class="bi bi-geo-alt-fill me-1"></i> Location
+      </a>
+
+      <div class="position-relative flex-grow-1">
+        <input type="text" class="form-control ps-4" placeholder="Search for dhaba and food">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+    </div>
+  </div>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to TripToDhaba</h1>
+      <p>Find the best dhabas, explore food, and enjoy your journey!</p>
+    </div>
+  </section>
+  <div class="food-image-wrapper">
+    <h3>Book our best food options</h3>
+    <img src="public/image/Dhaba images/Screenshot 2025-12-19 at 1.12.10 PM.png" alt="Food options" class="food-image">
+  </div>
+
+
+
+  <!-- DHABAS LISTING SECTION -->
+  <section class="dhaba-listing container my-5">
+
+    <h2 class="section-title mb-4">
+      Discover best dhabas near you
+    </h2>
+    <div class="dhaba-scroll">
+
+      <!-- CARD 1 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/IMG_9704-1024x683.jpg" alt="Vrundavan Dhaba">
+          <span class="rating-badge">⭐ 4.2</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Vrundavan Family Garden</h4>
+          <p class="cuisine">North Indian • Punjabi</p>
+          <p class="location">Ekodi Gondia • 2.3 km</p>
+
+          <div class="price-row">
+            <span>₹700 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 20% off on walk-in
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/IMG20211226WA0009-89368-92370.jpg" alt="Kesar Dhaba">
+          <span class="rating-badge">⭐ 4.0</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Kesar Nasta Point</h4>
+          <p class="cuisine">Snacks • Fast Food</p>
+          <p class="location">Ekodi, Gondia • 1.1 km</p>
+
+          <div class="price-row">
+            <span>₹400 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer green">
+            Flat 25% off on pre-booking
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/maharaja-dhaba.webp" alt="Maharaja Dhaba">
+          <span class="rating-badge">⭐ 4.1</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Maharaja Dhaba</h4>
+          <p class="cuisine">Indian • Family Dining</p>
+          <p class="location">Gondia • 3.0 km</p>
+
+          <div class="price-row">
+            <span>₹900 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 10% off on walk-in
+          </div>
+        </div>
+      </div>
+      <!-- CARD 4 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/unnamed (1).webp" alt="The Mini Eiffel Tower">
+          <span class="rating-badge">⭐ 4.7</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>The Mini Eiffel Tower</h4>
+          <p class="cuisine">Family & Friends Dining</p>
+          <p class="location">Gondia • 1.0 km</p>
+
+          <div class="price-row">
+            <span>₹1300 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 15% off on walk-in
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Next Section Card -->
+
+  <section class="dhaba-listing container my-5">
+
+    <h2 class="section-title mb-4">
+      Discover other dhabas
+    </h2>
+    <div class="dhaba-scroll">
+
+      <!-- CARD 1 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/IMG_9704-1024x683.jpg" alt="Vrundavan Dhaba">
+          <span class="rating-badge">⭐ 4.2</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Vrundavan Family Garden</h4>
+          <p class="cuisine">North Indian • Punjabi</p>
+          <p class="location">Ekodi Gondia • 2.3 km</p>
+
+          <div class="price-row">
+            <span>₹700 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 20% off on walk-in
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/IMG20211226WA0009-89368-92370.jpg" alt="Kesar Dhaba">
+          <span class="rating-badge">⭐ 4.0</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Kesar Nasta Point</h4>
+          <p class="cuisine">Snacks • Fast Food</p>
+          <p class="location">Ekodi, Gondia • 1.1 km</p>
+
+          <div class="price-row">
+            <span>₹400 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer green">
+            Flat 25% off on pre-booking
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/maharaja-dhaba.webp" alt="Maharaja Dhaba">
+          <span class="rating-badge">⭐ 4.1</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>Maharaja Dhaba</h4>
+          <p class="cuisine">Indian • Family Dining</p>
+          <p class="location">Gondia • 3.0 km</p>
+
+          <div class="price-row">
+            <span>₹900 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 10% off on walk-in
+          </div>
+        </div>
+      </div>
+      <!-- CARD 4 -->
+      <div class="dhaba-card">
+        <div class="dhaba-image">
+          <img src="public/image/Dhaba images/unnamed (1).webp" alt="The Mini Eiffel Tower">
+          <span class="rating-badge">⭐ 4.7</span>
+        </div>
+
+        <div class="dhaba-info">
+          <h4>The Mini Eiffel Tower</h4>
+          <p class="cuisine">Family & Friends Dining</p>
+          <p class="location">Gondia • 1.0 km</p>
+
+          <div class="price-row">
+            <span>₹1300 for two</span>
+            <span class="booking">Table booking</span>
+          </div>
+
+          <div class="offer">
+            Flat 15% off on walk-in
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="col brand">
+      <h2>TripToDhaba</h2>
+      <p>© 2025 TripToDhaba Limited</p>
+    </div>
+
+    <div class="col">
+      <h4>Company</h4>
+      <a>About Us</a><a>Join Us</a><a>Careers</a><a>Team</a><a></a>
+    </div>
+
+    <div class="col">
+      <h4>Contact us</h4>
+      <a>Help with AI</a><a>Help & Support</a><a>Partner With Us</a><a>Ride With Us</a>
+    </div>
+
+    <div class="col">
+      <h4>Available in</h4>
+      <a>Pune</a><a>Nagpur</a><a>Lucknow</a><a>Noida</a><a>Bangalore</a>
+      <a>Active across 500+ national highways</a>
+    </div>
+
+    <div class="col">
+      <h4>Life at TripToDhaba</h4>
+      <a>Explore with us</a><a>TripToDhaba News</a><a>Our Story</a>
+      <br>
+      <h4>Social Links</h4>
+      <div class="icons">
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+      </div>
+    </div>
+  </footer>
+  <div class="site-credit">Website built by Sauryaman Bisen</div>
+</body>
+
+</html>
