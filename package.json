@@ -1,0 +1,14 @@
+{
+  "name": "trip-to-dhaba",
+  "version": "1.0.0",
+  "description": "TripToDhaba – Discover and book the best dhabas near you across India's highways and cities.",
+  "author": "Sauryaman Bisen",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0"
+  },
+  "scripts": {
+    "install-deps": "npm install"
+  }
+}
