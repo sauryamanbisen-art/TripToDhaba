@@ -35,7 +35,7 @@ ALL_CARDS.forEach(card => {
   const btn = card.querySelector(".wishlist-btn");
   if (wishlist.has(id)) {
     btn.classList.add("liked");
-    btn.innerHTML = `<i class="bi bi-heart-fill"></i>`;
+    btn.innerHTML = `<i class="fa-solid fa-heart"></i>`;
   }
 });
 
@@ -154,13 +154,13 @@ grid.addEventListener("click", e => {
   if (wishlist.has(id)) {
     wishlist.delete(id);
     wBtn.classList.remove("liked");
-    wBtn.innerHTML = `<i class="bi bi-heart"></i>`;
+    wBtn.innerHTML = `<i class="fa-regular fa-heart"></i>`;
     wBtn.setAttribute("aria-label", "Add to wishlist");
     showToast("Removed from wishlist", "#e63946");
   } else {
     wishlist.add(id);
     wBtn.classList.add("liked");
-    wBtn.innerHTML = `<i class="bi bi-heart-fill"></i>`;
+    wBtn.innerHTML = `<i class="fa-solid fa-heart"></i>`;
     wBtn.setAttribute("aria-label", "Remove from wishlist");
     showToast("Added to wishlist ❤️");
   }
@@ -236,6 +236,16 @@ document.getElementById("signInForm").addEventListener("submit", e => {
   showToast("OTP sent! Check your phone 📱");
 });
 
+
+// ── MENU BUTTONS ──────────────────────────────────────────
+grid.addEventListener("click", e => {
+  const menuBtn = e.target.closest(".btn-menu");
+  if (!menuBtn) return;
+  e.stopPropagation();
+  const card = menuBtn.closest(".dhaba-card");
+  showToast("Menu for " + card.dataset.dhabaName + " coming soon! 🍽️");
+});
+
 // ── TOAST ─────────────────────────────────────────────────
 let toastTimer = null;
 function showToast(msg, bg = "#1ab16a") {
@@ -280,6 +290,28 @@ document.getElementById("detectLocation").addEventListener("click", () => {
 navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
 navMenu.querySelectorAll("a").forEach(a => {
   a.addEventListener("click", () => navMenu.classList.remove("open"));
+});
+
+
+// ── SCROLL SPY FOR NAV ────────────────────────────────────
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const scrollY = window.pageYOffset;
+  
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 100;
+    const sectionId = current.getAttribute("id");
+    
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelectorAll(".nav-link").forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + sectionId) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
 });
 
 // ── STICKY NAV SHADOW ─────────────────────────────────────

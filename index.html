@@ -6,8 +6,8 @@
   <meta name="author" content="Sauryaman Bisen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TripToDhaba – Discover and book the best dhabas near you. Explore top-rated local restaurants across India's highways and cities.">
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/dhabas.css">
   <title>TripToDhaba - Find the Best Dhabas Near You</title>
@@ -19,22 +19,22 @@
   <nav class="custom-nav" id="mainNav">
     <div class="nav-container">
       <a class="navbar-brand" href="#">
-        <i class="bi bi-shop-window brand-icon"></i>
+        <i class="fa-solid fa-shop brand-icon"></i>
         Trip<span class="brand-accent">To</span>Dhaba
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <i class="bi bi-list"></i>
+        <i class="fa-solid fa-bars"></i>
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#" class="nav-link active"><i class="bi bi-house-fill"></i> Home</a></li>
-        <li><a href="#discover" class="nav-link"><i class="bi bi-compass-fill"></i> Discover</a></li>
-        <li><a href="#" class="nav-link"><i class="bi bi-gift-fill"></i> Offers</a></li>
-        <li><a href="#" class="nav-link"><i class="bi bi-star-fill"></i> Reviews</a></li>
+        <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#discover" class="nav-link"><i class="fa-solid fa-compass"></i> Discover</a></li>
+        <li><a href="#offers" class="nav-link"><i class="fa-solid fa-gift"></i> Offers</a></li>
+        <li><a href="#" class="nav-link"><i class="fa-solid fa-star"></i> Reviews</a></li>
         <li>
           <button class="btn-signin" id="signInBtn">
-            <i class="bi bi-person-circle"></i> Sign In
+            <i class="fa-solid fa-user-circle"></i> Sign In
           </button>
         </li>
       </ul>
@@ -45,20 +45,20 @@
   <section class="hero-section" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge"><i class="bi bi-fire"></i> 500+ Dhabas Listed</div>
+      <div class="hero-badge"><i class="fa-solid fa-fire"></i> 500+ Dhabas Listed</div>
       <h1>Discover the <span class="highlight">Soul</span> of India's Cuisine</h1>
       <p>Find the best dhabas, explore local flavors, and book your table in seconds.</p>
 
       <!-- Hero Search -->
       <div class="hero-search-bar">
         <div class="location-detect" id="detectLocation" title="Use my location">
-          <i class="bi bi-geo-alt-fill"></i>
+          <i class="fa-solid fa-location-dot"></i>
           <span id="locationLabel">Location</span>
         </div>
         <div class="search-divider"></div>
         <input type="text" id="heroSearchInput" placeholder="Search dhabas, cuisines, or areas..." autocomplete="off">
         <button class="hero-search-btn" id="heroSearchBtn">
-          <i class="bi bi-search"></i> Search
+          <i class="fa-solid fa-magnifying-glass"></i> Search
         </button>
       </div>
 
@@ -77,7 +77,7 @@
     <div class="filter-top">
       <div class="category-pills" id="categoryPills">
         <button class="pill active" data-filter="all">All</button>
-        <button class="pill" data-filter="veg"><i class="bi bi-circle-fill veg-dot"></i> Pure Veg</button>
+        <button class="pill" data-filter="veg"><i class="fa-solid fa-circle veg-dot"></i> Pure Veg</button>
         <button class="pill" data-filter="non-veg">Non-Veg</button>
         <button class="pill" data-filter="snacks">Snacks</button>
         <button class="pill" data-filter="family">Family Dining</button>
@@ -85,7 +85,7 @@
         <button class="pill" data-filter="fast-food">Fast Food</button>
       </div>
       <div class="sort-group">
-        <label for="sortSelect"><i class="bi bi-sort-down"></i></label>
+        <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
         <select id="sortSelect" class="sort-select">
           <option value="default">Sort: Relevance</option>
           <option value="rating">Rating: High to Low</option>
@@ -117,20 +117,20 @@
         <img src="public/image/Dhaba images/IMG_9704-1024x683.jpg" alt="Vrundavan Family Garden" loading="lazy">
         <span class="rating-badge">⭐ 4.2</span>
         <button class="wishlist-btn" data-id="1" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Vrundavan Family Garden</h4>
         <p class="cuisine">North Indian • Punjabi</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Ekodi, Gondia &bull; 2.3 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Ekodi, Gondia &bull; 2.3 km</p>
         <div class="price-row">
           <span class="price-tag">₹700 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 20% off on walk-in</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="1"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="1"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -153,20 +153,20 @@
         <span class="rating-badge avg">⭐ 4.0</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="2" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Kesar Nasta Point</h4>
         <p class="cuisine">Snacks • Fast Food</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Ekodi, Gondia &bull; 1.1 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Ekodi, Gondia &bull; 1.1 km</p>
         <div class="price-row">
           <span class="price-tag">₹400 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 25% off on pre-booking</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="2"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="2"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -188,20 +188,20 @@
         <img src="public/image/Dhaba images/maharaja-dhaba.webp" alt="Maharaja Dhaba" loading="lazy">
         <span class="rating-badge avg">⭐ 4.1</span>
         <button class="wishlist-btn" data-id="3" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Maharaja Dhaba</h4>
         <p class="cuisine">Indian • Family Dining</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Gondia &bull; 3.0 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Gondia &bull; 3.0 km</p>
         <div class="price-row">
           <span class="price-tag">₹900 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 10% off on walk-in</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="3"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="3"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -223,20 +223,20 @@
         <img src="public/image/Dhaba images/unnamed (1).webp" alt="The Mini Eiffel Tower" loading="lazy">
         <span class="rating-badge">⭐ 4.7</span>
         <button class="wishlist-btn" data-id="4" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>The Mini Eiffel Tower</h4>
         <p class="cuisine">Family &amp; Friends Dining</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Gondia &bull; 1.0 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Gondia &bull; 1.0 km</p>
         <div class="price-row">
           <span class="price-tag">₹1300 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 15% off on walk-in</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="4"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="4"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -259,20 +259,20 @@
         <span class="rating-badge low">⭐ 3.8</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="5" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Fuel Street — Laxmi Nagar</h4>
         <p class="cuisine">Street Food • Snacks</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Laxmi Nagar, Gondia &bull; 0.8 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Laxmi Nagar, Gondia &bull; 0.8 km</p>
         <div class="price-row">
           <span class="price-tag">₹250 for two</span>
           <span class="closed-tag">● Closed</span>
         </div>
         <div class="offer">🏷️ 10% off on combo meals</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="5"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="5"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -294,20 +294,20 @@
         <img src="public/image/Dhaba images/surya-prasad-road-.avif" alt="Surya Prasad Road Dhaba" loading="lazy">
         <span class="rating-badge">⭐ 4.3</span>
         <button class="wishlist-btn" data-id="6" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Surya Prasad Road Dhaba</h4>
         <p class="cuisine">Highway Dhaba • Dal-Roti</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> NH-6, Surya Prasad Rd &bull; 5.2 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> NH-6, Surya Prasad Rd &bull; 5.2 km</p>
         <div class="price-row">
           <span class="price-tag">₹550 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Free lassi with any thali</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="6"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="6"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -329,20 +329,20 @@
         <img src="public/image/Dhaba images/dara.webp" alt="Dara Dhaba" loading="lazy">
         <span class="rating-badge">⭐ 4.5</span>
         <button class="wishlist-btn" data-id="7" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Dara Dhaba</h4>
         <p class="cuisine">Punjabi • Butter Chicken</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Gondia City &bull; 2.0 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Gondia City &bull; 2.0 km</p>
         <div class="price-row">
           <span class="price-tag">₹800 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 30% off first order</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="7"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="7"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -365,20 +365,20 @@
         <span class="rating-badge avg">⭐ 4.0</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="8" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Kesar Family Dhaba</h4>
         <p class="cuisine">Vegetarian • Thali</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Ekodi, Gondia &bull; 1.4 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Ekodi, Gondia &bull; 1.4 km</p>
         <div class="price-row">
           <span class="price-tag">₹350 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ ₹50 off on thali combos</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="8"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="8"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -400,20 +400,20 @@
         <img src="public/image/Dhaba images/kaizer.jpg" alt="Kaizer Restaurant" loading="lazy">
         <span class="rating-badge">⭐ 4.6</span>
         <button class="wishlist-btn" data-id="9" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Kaizer Restaurant</h4>
         <p class="cuisine">Multi-Cuisine • Continental</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Gondia Main Road &bull; 1.7 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Gondia Main Road &bull; 1.7 km</p>
         <div class="price-row">
           <span class="price-tag">₹1100 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Flat 20% off weekend dinners</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="9"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="9"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -435,20 +435,20 @@
         <img src="public/image/Dhaba images/High-Res-079-1024x683.jpg" alt="High-Res Dhaba Resort" loading="lazy">
         <span class="rating-badge">⭐ 4.4</span>
         <button class="wishlist-btn" data-id="10" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>High-Res Dhaba &amp; Resort</h4>
         <p class="cuisine">Indian • BBQ • Tandoor</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Nagpur Highway &bull; 8.1 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Nagpur Highway &bull; 8.1 km</p>
         <div class="price-row">
           <span class="price-tag">₹1200 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Book 4+ seats, 1 meal free</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="10"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="10"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -471,20 +471,20 @@
         <span class="rating-badge low">⭐ 3.9</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="11" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>N7 Nasta Corner</h4>
         <p class="cuisine">Snacks • Tea • Breakfast</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> NH-7, Gondia &bull; 3.5 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> NH-7, Gondia &bull; 3.5 km</p>
         <div class="price-row">
           <span class="price-tag">₹200 for two</span>
           <span class="closed-tag">● Closed</span>
         </div>
         <div class="offer">🏷️ Chai + Samosa combo at ₹40</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="11"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="11"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -506,20 +506,20 @@
         <img src="public/image/Dhaba images/Blog_20231130-486750586-1701366049.png" alt="Blog Dhaba Garden" loading="lazy">
         <span class="rating-badge">⭐ 4.2</span>
         <button class="wishlist-btn" data-id="12" aria-label="Add to wishlist">
-          <i class="bi bi-heart"></i>
+          <i class="fa-regular fa-heart"></i>
         </button>
       </div>
       <div class="dhaba-info">
         <h4>Blog Dhaba &amp; Garden</h4>
         <p class="cuisine">Family Dining • Garden Seating</p>
-        <p class="location-row"><i class="bi bi-geo-alt-fill"></i> Gondia Outskirts &bull; 6.3 km</p>
+        <p class="location-row"><i class="fa-solid fa-location-dot"></i> Gondia Outskirts &bull; 6.3 km</p>
         <div class="price-row">
           <span class="price-tag">₹950 for two</span>
           <span class="open-tag">● Open Now</span>
         </div>
         <div class="offer">🏷️ Kids eat free on weekends</div>
         <div class="card-actions" style="margin-top:12px;">
-          <button class="btn-book" data-id="12"><i class="bi bi-calendar2-check"></i> Book Table</button>
+          <button class="btn-book" data-id="12"><i class="fa-solid fa-calendar-check"></i> Book Table</button>
           <button class="btn-menu">Menu</button>
         </div>
       </div>
@@ -529,32 +529,32 @@
 
   <!-- NO RESULTS -->
   <div class="no-results hidden" id="noResults">
-    <i class="bi bi-emoji-frown"></i>
+    <i class="fa-regular fa-face-frown"></i>
     <h3>No dhabas found</h3>
     <p>Try a different search or category filter.</p>
     <button class="btn-reset" onclick="resetFilters()">Show All Dhabas</button>
   </div>
 
   <!-- SPECIAL OFFERS BANNER -->
-  <section class="offers-banner container my-5">
+  <section class="offers-banner container my-5" id="offers">
     <h2 class="section-title">🎉 Today's Special Offers</h2>
     <div class="offers-grid">
       <div class="offer-banner-card red">
-        <i class="bi bi-percent offer-icon"></i>
+        <i class="fa-solid fa-percent offer-icon"></i>
         <div>
           <strong>Flat 30% Off</strong>
           <p>On pre-booking any table before 2 PM</p>
         </div>
       </div>
       <div class="offer-banner-card green">
-        <i class="bi bi-truck offer-icon"></i>
+        <i class="fa-solid fa-truck offer-icon"></i>
         <div>
           <strong>Free Home Delivery</strong>
           <p>On orders above ₹500 in your city</p>
         </div>
       </div>
       <div class="offer-banner-card orange">
-        <i class="bi bi-gift offer-icon"></i>
+        <i class="fa-solid fa-gift offer-icon"></i>
         <div>
           <strong>First Visit Bonus</strong>
           <p>₹100 off on your first dhaba booking</p>
@@ -566,9 +566,9 @@
   <!-- TABLE BOOKING MODAL -->
   <div class="modal-overlay hidden" id="bookingModal">
     <div class="modal-box">
-      <button class="modal-close" id="closeModal"><i class="bi bi-x-lg"></i></button>
+      <button class="modal-close" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header">
-        <i class="bi bi-calendar2-check-fill modal-icon"></i>
+        <i class="fa-solid fa-calendar-check-fill modal-icon"></i>
         <h3 id="modalDhabaName">Book a Table</h3>
         <p id="modalDhabaLocation" class="modal-subtitle"></p>
       </div>
@@ -613,7 +613,7 @@
           <textarea id="specialRequest" rows="2" placeholder="E.g. Window seat, birthday decoration..."></textarea>
         </div>
         <button type="submit" class="btn-book-confirm">
-          <i class="bi bi-check-circle-fill"></i> Confirm Booking
+          <i class="fa-solid fa-circle-check"></i> Confirm Booking
         </button>
       </form>
     </div>
@@ -621,16 +621,16 @@
 
   <!-- BOOKING SUCCESS TOAST -->
   <div class="toast-msg hidden" id="toastMsg">
-    <i class="bi bi-check-circle-fill"></i>
+    <i class="fa-solid fa-circle-check"></i>
     <span id="toastText">Booking confirmed!</span>
   </div>
 
   <!-- SIGN IN MODAL -->
   <div class="modal-overlay hidden" id="signInModal">
     <div class="modal-box signin-box">
-      <button class="modal-close" id="closeSignIn"><i class="bi bi-x-lg"></i></button>
+      <button class="modal-close" id="closeSignIn"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header">
-        <i class="bi bi-person-circle modal-icon"></i>
+        <i class="fa-solid fa-user-circle modal-icon"></i>
         <h3>Welcome Back</h3>
         <p class="modal-subtitle">Sign in to manage your bookings & favourites</p>
       </div>
@@ -640,7 +640,7 @@
           <input type="tel" id="loginPhone" placeholder="Enter your 10-digit phone" required>
         </div>
         <button type="submit" class="btn-book-confirm">
-          <i class="bi bi-send-fill"></i> Send OTP
+          <i class="fa-solid fa-paper-plane"></i> Send OTP
         </button>
         <p class="signin-note">By continuing, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
       </form>
@@ -650,14 +650,14 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-brand">
-      <h2><i class="bi bi-shop-window"></i> TripToDhaba</h2>
+      <h2><i class="fa-solid fa-shop"></i> TripToDhaba</h2>
       <p>India's favourite platform to discover, explore and book the best dhabas across highways and cities.</p>
       <div class="social-icons">
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
       <p class="copyright">© 2025 TripToDhaba Limited</p>
     </div>
@@ -701,7 +701,7 @@
   <div class="site-credit">Built by Sauryaman Bisen</div>
 
   <!-- Bootstrap JS (for toggler) -->
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="src/scripts/app.js"></script>
 </body>
 
