@@ -1,4 +1,4 @@
-# TripToDhaba 🍽️
+# TripToDhaba 
 
 > Discover and book the best dhabas near you — across India's highways and cities.
 
@@ -6,7 +6,7 @@ A responsive, Zomato-style web app built with **Vanilla HTML, CSS & JavaScript**
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repo
 ```bash
@@ -25,14 +25,14 @@ Just open `index.html` directly in your browser — no build step needed.
 
 ---
 
-## ✨ Features
-- 🔍 Live search by dhaba name, cuisine, or location
-- 🏷️ Category filter pills (Veg, Non-Veg, Snacks, Family, Highway…)
-- ↕️ Sort by Rating, Price, Distance
-- ❤️ Wishlist / favourites (saved to localStorage)
-- 📅 Table booking modal with date, time & guest count
-- 📍 Real geolocation → city name via OpenStreetMap
-- 📱 Fully responsive — Mobile, Tablet & Desktop
+##  Features
+-  Live search by dhaba name, cuisine, or location
+-  Category filter pills (Veg, Non-Veg, Snacks, Family, Highway…)
+-  Sort by Rating, Price, Distance
+-  Wishlist / favourites (saved to localStorage)
+-  Table booking modal with date, time & guest count
+-  Real geolocation → city name via OpenStreetMap
+-  Fully responsive — Mobile, Tablet & Desktop
 
 ---
 
@@ -63,5 +63,5 @@ TripToDhaba/
 
 ---
 
-## 👤 Author
+##  Author
 **Sauryaman Bisen** — [GitHub](https://github.com/sauryamanbisen)
