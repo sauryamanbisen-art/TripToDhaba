@@ -2,53 +2,21 @@ diff --git a/src/scripts/app.js b/src/scripts/app.js
 index d16a5be..819fd3d 100644
 --- a/src/scripts/app.js
 +++ b/src/scripts/app.js
-@@ -100,7 +178,48 @@ document.getElementById("categoryPills").addEventListener("click", e => {
- });
- 
- // ── SORT ─────────────────────────────────────────────────
--document.getElementById("sortSelect").addEventListener("change", e => {
-+const sortSelect = document.getElementById("sortSelect");
-+const sortTrigger = document.getElementById("sortTrigger");
-+const sortMenu = document.getElementById("sortMenu");
-+const sortSelectedText = document.getElementById("sortSelectedText");
-+const sortOptions = document.querySelectorAll(".sort-option");
-+
-+// Toggle custom dropdown
-+sortTrigger.addEventListener("click", (e) => {
-+  e.stopPropagation();
-+  sortTrigger.classList.toggle("open");
-+  sortMenu.classList.toggle("open");
-+});
-+
-+// Close when clicking outside
-+document.addEventListener("click", (e) => {
-+  if (!e.target.closest("#customSortDropdown")) {
-+    sortTrigger.classList.remove("open");
-+    sortMenu.classList.remove("open");
-+  }
-+});
-+
-+// Handle option click
-+sortOptions.forEach(option => {
-+  option.addEventListener("click", () => {
-+    // Update active class
+@@ -140,7 +259,16 @@ function resetFilters() {
+   searchQuery  = "";
+   heroInput.value = "";
+   document.querySelectorAll(".pill").forEach(p => p.classList.toggle("active", p.dataset.filter === "all"));
+-  document.getElementById("sortSelect").value = "default";
++  
++  // Reset custom sort dropdown
++  const defaultOption = Array.from(sortOptions).find(opt => opt.dataset.value === "default");
++  if (defaultOption) {
 +    sortOptions.forEach(opt => opt.classList.remove("active"));
-+    option.classList.add("active");
-+    
-+    // Update text
-+    sortSelectedText.textContent = option.textContent.trim();
-+    
-+    // Update hidden select and trigger change
-+    sortSelect.value = option.dataset.value;
-+    sortSelect.dispatchEvent(new Event("change"));
-+    
-+    // Close menu
-+    sortTrigger.classList.remove("open");
-+    sortMenu.classList.remove("open");
-+  });
-+});
-+
-+sortSelect.addEventListener("change", e => {
-   activeSort = e.target.value;
++    defaultOption.classList.add("active");
++    sortSelectedText.textContent = defaultOption.textContent.trim();
++  }
++  sortSelect.value = "default";
++  
    applyFilters();
- });
+ }
+ 

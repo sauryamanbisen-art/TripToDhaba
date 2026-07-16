@@ -259,7 +259,16 @@ function resetFilters() {
   searchQuery  = "";
   heroInput.value = "";
   document.querySelectorAll(".pill").forEach(p => p.classList.toggle("active", p.dataset.filter === "all"));
-  document.getElementById("sortSelect").value = "default";
+  
+  // Reset custom sort dropdown
+  const defaultOption = Array.from(sortOptions).find(opt => opt.dataset.value === "default");
+  if (defaultOption) {
+    sortOptions.forEach(opt => opt.classList.remove("active"));
+    defaultOption.classList.add("active");
+    sortSelectedText.textContent = defaultOption.textContent.trim();
+  }
+  sortSelect.value = "default";
+  
   applyFilters();
 }
 
