@@ -1,17 +1,20 @@
-diff --git a/src/scripts/app.js b/src/scripts/app.js
-index d16a5be..819fd3d 100644
---- a/src/scripts/app.js
-+++ b/src/scripts/app.js
-@@ -286,11 +414,7 @@ document.getElementById("detectLocation").addEventListener("click", () => {
-   );
- });
+diff --git a/src/styles/dhabas.css b/src/styles/dhabas.css
+index 0d9383d..bbb8163 100644
+--- a/src/styles/dhabas.css
++++ b/src/styles/dhabas.css
+@@ -107,15 +107,6 @@ body {
+ }
+ .btn-signin:hover { background: var(--red-dark); transform: translateY(-1px); }
  
--// ── MOBILE NAV ────────────────────────────────────────────
--navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
--navMenu.querySelectorAll("a").forEach(a => {
--  a.addEventListener("click", () => navMenu.classList.remove("open"));
--});
-+
+-.nav-toggle {
+-  display: none;
+-  background: none;
+-  border: none;
+-  font-size: 26px;
+-  color: var(--text);
+-  cursor: pointer;
+-  margin-left: auto;
+-}
  
- 
- // ── SCROLL SPY FOR NAV ────────────────────────────────────
+ /* ===== HERO ===== */
+ .hero-section {

@@ -107,15 +107,6 @@ body {
 }
 .btn-signin:hover { background: var(--red-dark); transform: translateY(-1px); }
 
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: var(--text);
-  cursor: pointer;
-  margin-left: auto;
-}
 
 /* ===== HERO ===== */
 .hero-section {
