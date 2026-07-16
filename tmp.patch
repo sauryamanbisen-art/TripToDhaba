@@ -2,134 +2,23 @@ diff --git a/src/styles/dhabas.css b/src/styles/dhabas.css
 index 0d9383d..bbb8163 100644
 --- a/src/styles/dhabas.css
 +++ b/src/styles/dhabas.css
-@@ -299,25 +290,121 @@ body {
- 
- .veg-dot { color: #1ab16a; font-size: 8px; }
- 
--.sort-select {
--  padding: 9px 14px;
-+.custom-sort-dropdown {
-+  position: relative;
-+  flex: 1; /* allow it to grow in mobile */
-+}
-+
-+.sort-trigger {
-+  display: flex;
-+  align-items: center;
-+  justify-content: space-between;
-+  padding: 10px 20px;
-   border: 1.5px solid var(--border);
--  border-radius: 10px;
-+  border-radius: 50px;
-   background: #fff;
--  font-size: 13.5px;
-+  font-size: 14px;
-+  font-weight: 500;
-   font-family: 'Poppins', sans-serif;
-   cursor: pointer;
-   color: var(--text);
--  outline: none;
--  transition: var(--transition);
-+  transition: all 0.3s ease;
-+  box-shadow: var(--shadow-sm);
-+  user-select: none;
-+}
-+.sort-trigger:hover, .sort-trigger.open {
-+  border-color: var(--red);
-+  box-shadow: 0 4px 12px rgba(230,57,70,0.1);
-+  transform: translateY(-1px);
-+}
-+.chevron-icon {
-+  font-size: 12px;
-+  color: var(--muted);
-+  transition: transform 0.3s ease;
-+}
-+.sort-trigger.open .chevron-icon {
-+  transform: rotate(180deg);
-+  color: var(--red);
-+}
-+
-+.sort-menu {
-+  position: absolute;
-+  top: calc(100% + 8px);
-+  right: 0;
-+  width: 240px; /* fixed width for nice layout */
-+  background: #2a2a2c; /* elegant dark gray matching native macOS style */
-+  border-radius: 14px;
-+  padding: 8px 0;
-+  box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05);
-+  opacity: 0;
-+  visibility: hidden;
-+  transform: translateY(-10px) scale(0.98);
-+  transform-origin: top right;
-+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-+  z-index: 2000;
-+}
-+.sort-menu.open {
-+  opacity: 1;
-+  visibility: visible;
-+  transform: translateY(0) scale(1);
-+}
-+
-+.sort-option {
-+  display: flex;
-+  align-items: center;
-+  gap: 10px;
-+  padding: 10px 16px;
-+  color: #e5e5e5;
-+  font-size: 14px;
-+  font-weight: 500;
-+  cursor: pointer;
-+  transition: background 0.15s ease, color 0.15s ease;
-+  user-select: none;
-+}
-+.sort-option:hover {
-+  background: #4a8df8; /* macOS native blue selection color */
-+  color: #fff;
-+}
-+.sort-option.active {
-+  color: #4a8df8;
-+}
-+.sort-option.active:hover {
-+  color: #fff;
-+}
-+.check-icon {
-+  font-size: 12px;
-+  opacity: 0; /* hidden by default */
-+  width: 14px;
-+}
-+.sort-option.active .check-icon {
-+  opacity: 1;
+@@ -743,19 +830,6 @@ body {
  }
--.sort-select:focus { border-color: var(--red); }
+ .footer-col a:hover { color: var(--red); }
  
- .sort-group {
-   display: flex;
-   align-items: center;
--  gap: 6px;
--  color: var(--muted);
-+  gap: 12px;
-+  color: var(--text);
-+}
-+.sort-group label {
-+  display: flex;
-+  align-items: center;
-+  justify-content: center;
-+  width: 42px;
-+  height: 42px;
-+  background: #fff;
-+  border: 1.5px solid var(--border);
-+  border-radius: 50%;
-+  font-size: 16px;
-+  color: var(--text);
-+  cursor: pointer;
-+  transition: all 0.3s ease;
-+  box-shadow: var(--shadow-sm);
-+  flex-shrink: 0;
-+}
-+.sort-group label:hover {
-+  color: var(--red);
-+  border-color: var(--red);
- }
+-/* ===== SITE CREDIT ===== */
+-.site-credit {
+-  position: fixed;
+-  right: 15px;
+-  bottom: 15px;
+-  background: rgba(0,0,0,0.78);
+-  color: #fff;
+-  padding: 6px 14px;
+-  font-size: 12px;
+-  border-radius: 20px;
+-  z-index: 9998;
+-  font-family: 'Poppins', sans-serif;
+-}
  
- .results-count {
+ /* ===== UTILITY ===== */
+ .hidden { display: none !important; }

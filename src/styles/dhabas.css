@@ -830,19 +830,6 @@ body {
 }
 .footer-col a:hover { color: var(--red); }
 
-/* ===== SITE CREDIT ===== */
-.site-credit {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  background: rgba(0,0,0,0.78);
-  color: #fff;
-  padding: 6px 14px;
-  font-size: 12px;
-  border-radius: 20px;
-  z-index: 9998;
-  font-family: 'Poppins', sans-serif;
-}
 
 /* ===== UTILITY ===== */
 .hidden { display: none !important; }
