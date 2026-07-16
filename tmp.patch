@@ -1,13 +1,13 @@
-diff --git a/index.html b/index.html
-index cef7b45..5c3fdbf 100644
---- a/index.html
-+++ b/index.html
-@@ -698,7 +722,7 @@
-     </div>
-   </footer>
- 
--  <div class="site-credit">Built by Sauryaman Bisen</div>
+diff --git a/src/scripts/app.js b/src/scripts/app.js
+index d16a5be..819fd3d 100644
+--- a/src/scripts/app.js
++++ b/src/scripts/app.js
+@@ -23,7 +23,7 @@ const signInModal  = document.getElementById("signInModal");
+ const toastMsg     = document.getElementById("toastMsg");
+ const toastText    = document.getElementById("toastText");
+ const navMenu      = document.getElementById("navMenu");
+-const navToggle    = document.getElementById("navToggle");
 +
  
-   <!-- Bootstrap JS (for toggler) -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ // All cards — queried once from the HTML
+ const ALL_CARDS = Array.from(grid.querySelectorAll(".dhaba-card"));

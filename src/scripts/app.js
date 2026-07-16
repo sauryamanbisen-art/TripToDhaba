@@ -23,7 +23,7 @@ const signInModal  = document.getElementById("signInModal");
 const toastMsg     = document.getElementById("toastMsg");
 const toastText    = document.getElementById("toastText");
 const navMenu      = document.getElementById("navMenu");
-const navToggle    = document.getElementById("navToggle");
+
 
 // All cards — queried once from the HTML
 const ALL_CARDS = Array.from(grid.querySelectorAll(".dhaba-card"));
