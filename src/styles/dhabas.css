@@ -1005,11 +1005,48 @@ body {
   .pill { flex-shrink: 0; scroll-snap-align: start; }
 
   /* Sort full-width */
-  .sort-select { width: 100%; }
-  .sort-group  { width: 100%; }
+  .sort-group { width: 100%; }
+  .sort-select { flex: 1; width: 100%; }
 
-  /* ── Dhaba Grid — single column ── */
-  .dhaba-grid-section { grid-template-columns: 1fr; gap: 16px; }
+  /* ── Dhaba Grid — Categorized Rows ── */
+  .dhaba-grid-section { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 32px; 
+  }
+  
+  .mobile-category-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .mobile-category-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .mobile-horizontal-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px; /* space for drop shadow */
+    margin: 0 -16px; /* pull out to edges */
+    padding: 4px 16px; /* inner padding for edges */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .mobile-horizontal-track::-webkit-scrollbar { display: none; } /* Safari/Chrome */
+  
+  .mobile-horizontal-track .dhaba-card {
+    flex-shrink: 0;
+    width: 280px;
+    scroll-snap-align: start;
+    /* ensure hover transform shadow doesn't get cut off vertically */
+    margin-bottom: 8px;
+  }
 
   /* ── Offers — single column ── */
   .offers-grid { grid-template-columns: 1fr; }
