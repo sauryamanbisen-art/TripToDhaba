@@ -71,8 +71,8 @@ function applyFilters() {
     }
   });
 
-  // Hide all, then show + re-order visible ones
-  ALL_CARDS.forEach(c => c.style.display = "none");
+  // ── RENDER DOM ──
+  grid.innerHTML = ""; // Clear grid completely
 
   if (visible.length === 0) {
     noResults.classList.remove("hidden");
