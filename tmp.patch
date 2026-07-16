@@ -2,23 +2,100 @@ diff --git a/src/styles/dhabas.css b/src/styles/dhabas.css
 index 0d9383d..bbb8163 100644
 --- a/src/styles/dhabas.css
 +++ b/src/styles/dhabas.css
-@@ -743,19 +830,6 @@ body {
- }
- .footer-col a:hover { color: var(--red); }
+@@ -801,41 +875,71 @@ body {
+   .nav-container { padding: 0 16px; position: relative; }
+   .navbar-brand  { font-size: 22px; }
  
--/* ===== SITE CREDIT ===== */
--.site-credit {
--  position: fixed;
--  right: 15px;
--  bottom: 15px;
--  background: rgba(0,0,0,0.78);
--  color: #fff;
--  padding: 6px 14px;
--  font-size: 12px;
--  border-radius: 20px;
--  z-index: 9998;
--  font-family: 'Poppins', sans-serif;
--}
+-  /* Hamburger */
+-  .nav-toggle { display: flex; align-items: center; margin-left: auto; }
  
- /* ===== UTILITY ===== */
- .hidden { display: none !important; }
+-  /* Slide-down menu */
++
++  /* Center brand when hamburger is hidden */
++  .nav-container { justify-content: center; }
++
++  /* Bottom Navigation bar */
+   .nav-menu {
+-    display: none;
+-    flex-direction: column;
+-    align-items: flex-start;
+-    position: absolute;
+-    top: var(--nav-h);
+-    left: 0; right: 0;
++    display: flex !important; /* override any JS toggle */
++    flex-direction: row;
++    justify-content: space-around;
++    align-items: center;
++    position: fixed;
++    bottom: 0;
++    top: auto;
++    left: 0; 
++    right: 0;
+     background: #fff;
+-    padding: 12px 16px 20px;
+-    border-bottom: 2px solid var(--border);
+-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+-    gap: 2px;
+-    z-index: 999;
++    padding: 10px 16px;
++    padding-bottom: max(12px, env(safe-area-inset-bottom));
++    border-top: 1px solid var(--border);
++    border-bottom: none;
++    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
++    gap: 0;
++    z-index: 9999;
++    margin: 0;
+   }
+-  .nav-menu.open { display: flex; }
+-  .nav-menu li   { width: 100%; }
++  .nav-menu li { width: auto; }
++  
+   .nav-link {
+-    width: 100%;
+-    padding: 12px 14px;
+-    font-size: 15px;
+-    border-radius: 10px;
++    width: auto;
++    padding: 10px;
++    display: flex;
++    justify-content: center;
++    align-items: center;
++    border-radius: 50%;
++    color: var(--muted);
++    transition: all 0.3s ease;
+   }
++  .nav-link i { font-size: 22px; }
++  .nav-link span { display: none; } /* hide text */
++
+   .btn-signin {
+-    width: 100%;
++    width: auto;
++    background: transparent;
++    color: var(--muted);
++    padding: 10px;
++    margin-top: 0;
++    display: flex;
+     justify-content: center;
+-    padding: 12px;
+-    border-radius: 10px;
+-    font-size: 15px;
+-    margin-top: 6px;
++    align-items: center;
++    border-radius: 50%;
++    transition: all 0.3s ease;
++  }
++  .btn-signin i { font-size: 24px; }
++  .btn-signin span { display: none; } /* hide text */
++
++  /* Active/Hover states for icons */
++  .nav-link.active, .nav-link:hover, .btn-signin:hover {
++    background: rgba(230,57,70,0.08);
++    color: var(--red);
+   }
+ 
++  /* Add padding to body so bottom content isn't cut off by the navbar */
++  body { padding-bottom: 70px; }
++
+   /* ── Hero ── */
+   .hero-section {
+     min-height: 480px;
