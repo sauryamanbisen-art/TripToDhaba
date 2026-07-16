@@ -2,14 +2,98 @@ diff --git a/src/scripts/app.js b/src/scripts/app.js
 index d16a5be..819fd3d 100644
 --- a/src/scripts/app.js
 +++ b/src/scripts/app.js
-@@ -71,8 +71,8 @@ function applyFilters() {
-     }
-   });
+@@ -83,12 +83,90 @@ function applyFilters() {
+   noResults.classList.add("hidden");
+   resultsCount.textContent = `Showing ${visible.length} dhaba${visible.length > 1 ? "s" : ""}`;
  
--  // Hide all, then show + re-order visible ones
--  ALL_CARDS.forEach(c => c.style.display = "none");
-+  // ── RENDER DOM ──
-+  grid.innerHTML = ""; // Clear grid completely
+-  visible.forEach(card => {
+-    card.style.display = "";   // show
+-    grid.appendChild(card);    // re-order in DOM for sort
+-  });
++  if (window.innerWidth <= 768) {
++    // ── MOBILE: CATEGORIZED ROWS ──
++    const categories = [
++      { id: 'veg', title: 'Pure Veg', filterTag: 'veg' },
++      { id: 'non-veg', title: 'Non-Veg', filterTag: 'non-veg' },
++      { id: 'snacks', title: 'Snacks & Fast Food', filterTag: 'snacks' }
++    ];
++
++    // Some cards might not fit the main 3 exactly, so we track rendered cards
++    const renderedCardIds = new Set();
++
++    categories.forEach(cat => {
++      // Find cards matching this category
++      const catCards = visible.filter(card => {
++        const tags = (card.dataset.tags || "").split(" ");
++        return tags.includes(cat.filterTag);
++      });
++
++      if (catCards.length > 0) {
++        // Create category container
++        const row = document.createElement('div');
++        row.className = 'mobile-category-row';
++        
++        const title = document.createElement('h3');
++        title.className = 'mobile-category-title';
++        title.textContent = cat.title;
++        row.appendChild(title);
++        
++        const track = document.createElement('div');
++        track.className = 'mobile-horizontal-track';
++        
++        catCards.forEach(c => {
++          c.style.display = ""; // Ensure it's visible
++          // Clone the card so it can appear in multiple rows if needed (e.g. veg + snacks)
++          // Actually, cloning loses event listeners if we aren't careful. 
++          // Since our event listeners are on `grid` using event delegation, cloning is perfectly safe!
++          const clonedCard = c.cloneNode(true);
++          track.appendChild(clonedCard);
++          renderedCardIds.add(c.dataset.id);
++        });
++        
++        row.appendChild(track);
++        grid.appendChild(row);
++      }
++    });
++
++    // Fallback for any cards that didn't match the 3 categories
++    const otherCards = visible.filter(c => !renderedCardIds.has(c.dataset.id));
++    if (otherCards.length > 0) {
++      const row = document.createElement('div');
++      row.className = 'mobile-category-row';
++      const title = document.createElement('h3');
++      title.className = 'mobile-category-title';
++      title.textContent = "More to Explore";
++      row.appendChild(title);
++      const track = document.createElement('div');
++      track.className = 'mobile-horizontal-track';
++      otherCards.forEach(c => {
++        c.style.display = "";
++        track.appendChild(c.cloneNode(true));
++      });
++      row.appendChild(track);
++      grid.appendChild(row);
++    }
++
++  } else {
++    // ── DESKTOP: FLAT GRID ──
++    visible.forEach(card => {
++      card.style.display = "";   // show
++      grid.appendChild(card);    // re-order in DOM for sort
++    });
++  }
+ }
  
-   if (visible.length === 0) {
-     noResults.classList.remove("hidden");
++// Re-render when switching between mobile/desktop layouts
++let lastIsMobile = window.innerWidth <= 768;
++window.addEventListener("resize", () => {
++  const isMobile = window.innerWidth <= 768;
++  if (isMobile !== lastIsMobile) {
++    lastIsMobile = isMobile;
++    applyFilters();
++  }
++});
++
+ // ── FILTER PILLS ─────────────────────────────────────────
+ document.getElementById("categoryPills").addEventListener("click", e => {
+   const pill = e.target.closest(".pill");
