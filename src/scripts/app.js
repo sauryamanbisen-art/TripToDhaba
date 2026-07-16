@@ -414,11 +414,7 @@ document.getElementById("detectLocation").addEventListener("click", () => {
   );
 });
 
-// ── MOBILE NAV ────────────────────────────────────────────
-navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
-navMenu.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => navMenu.classList.remove("open"));
-});
+
 
 
 // ── SCROLL SPY FOR NAV ────────────────────────────────────
