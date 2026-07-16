@@ -2,28 +2,40 @@ diff --git a/index.html b/index.html
 index cef7b45..5c3fdbf 100644
 --- a/index.html
 +++ b/index.html
-@@ -23,18 +23,16 @@
-         Trip<span class="brand-accent">To</span>Dhaba
-       </a>
- 
--      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
--        <i class="fa-solid fa-bars"></i>
--      </button>
+@@ -85,8 +83,34 @@
+         <button class="pill" data-filter="fast-food">Fast Food</button>
+       </div>
+       <div class="sort-group">
+-        <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
+-        <select id="sortSelect" class="sort-select">
++        <label id="sortLabelBtn"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
++        
++        <div class="custom-sort-dropdown" id="customSortDropdown">
++          <div class="sort-trigger" id="sortTrigger">
++            <span id="sortSelectedText">Sort: Relevance</span>
++            <i class="fa-solid fa-chevron-down chevron-icon"></i>
++          </div>
++          
++          <div class="sort-menu" id="sortMenu">
++            <div class="sort-option active" data-value="default">
++              <i class="fa-solid fa-check check-icon"></i> Sort: Relevance
++            </div>
++            <div class="sort-option" data-value="rating">
++              <i class="fa-solid fa-check check-icon"></i> Rating: High to Low
++            </div>
++            <div class="sort-option" data-value="price-asc">
++              <i class="fa-solid fa-check check-icon"></i> Price: Low to High
++            </div>
++            <div class="sort-option" data-value="price-desc">
++              <i class="fa-solid fa-check check-icon"></i> Price: High to Low
++            </div>
++            <div class="sort-option" data-value="distance">
++              <i class="fa-solid fa-check check-icon"></i> Distance: Nearest
++            </div>
++          </div>
++        </div>
 +
- 
-       <ul class="nav-menu" id="navMenu">
--        <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
--        <li><a href="#discover" class="nav-link"><i class="fa-solid fa-compass"></i> Discover</a></li>
--        <li><a href="#offers" class="nav-link"><i class="fa-solid fa-gift"></i> Offers</a></li>
--        <li><a href="#" class="nav-link"><i class="fa-solid fa-star"></i> Reviews</a></li>
-+        <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
-+        <li><a href="#discover" class="nav-link"><i class="fa-solid fa-compass"></i> <span>Discover</span></a></li>
-+        <li><a href="#offers" class="nav-link"><i class="fa-solid fa-gift"></i> <span>Offers</span></a></li>
-+        <li><a href="#" class="nav-link"><i class="fa-solid fa-star"></i> <span>Reviews</span></a></li>
-         <li>
-           <button class="btn-signin" id="signInBtn">
--            <i class="fa-solid fa-user-circle"></i> Sign In
-+            <i class="fa-solid fa-user-circle"></i> <span>Sign In</span>
-           </button>
-         </li>
-       </ul>
++        <select id="sortSelect" class="hidden">
+           <option value="default">Sort: Relevance</option>
+           <option value="rating">Rating: High to Low</option>
+           <option value="price-asc">Price: Low to High</option>

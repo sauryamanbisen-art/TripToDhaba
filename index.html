@@ -83,8 +83,34 @@
         <button class="pill" data-filter="fast-food">Fast Food</button>
       </div>
       <div class="sort-group">
-        <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
-        <select id="sortSelect" class="sort-select">
+        <label id="sortLabelBtn"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
+        
+        <div class="custom-sort-dropdown" id="customSortDropdown">
+          <div class="sort-trigger" id="sortTrigger">
+            <span id="sortSelectedText">Sort: Relevance</span>
+            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+          </div>
+          
+          <div class="sort-menu" id="sortMenu">
+            <div class="sort-option active" data-value="default">
+              <i class="fa-solid fa-check check-icon"></i> Sort: Relevance
+            </div>
+            <div class="sort-option" data-value="rating">
+              <i class="fa-solid fa-check check-icon"></i> Rating: High to Low
+            </div>
+            <div class="sort-option" data-value="price-asc">
+              <i class="fa-solid fa-check check-icon"></i> Price: Low to High
+            </div>
+            <div class="sort-option" data-value="price-desc">
+              <i class="fa-solid fa-check check-icon"></i> Price: High to Low
+            </div>
+            <div class="sort-option" data-value="distance">
+              <i class="fa-solid fa-check check-icon"></i> Distance: Nearest
+            </div>
+          </div>
+        </div>
+
+        <select id="sortSelect" class="hidden">
           <option value="default">Sort: Relevance</option>
           <option value="rating">Rating: High to Low</option>
           <option value="price-asc">Price: Low to High</option>
