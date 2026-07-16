@@ -178,7 +178,48 @@ document.getElementById("categoryPills").addEventListener("click", e => {
 });
 
 // ── SORT ─────────────────────────────────────────────────
-document.getElementById("sortSelect").addEventListener("change", e => {
+const sortSelect = document.getElementById("sortSelect");
+const sortTrigger = document.getElementById("sortTrigger");
+const sortMenu = document.getElementById("sortMenu");
+const sortSelectedText = document.getElementById("sortSelectedText");
+const sortOptions = document.querySelectorAll(".sort-option");
+
+// Toggle custom dropdown
+sortTrigger.addEventListener("click", (e) => {
+  e.stopPropagation();
+  sortTrigger.classList.toggle("open");
+  sortMenu.classList.toggle("open");
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("#customSortDropdown")) {
+    sortTrigger.classList.remove("open");
+    sortMenu.classList.remove("open");
+  }
+});
+
+// Handle option click
+sortOptions.forEach(option => {
+  option.addEventListener("click", () => {
+    // Update active class
+    sortOptions.forEach(opt => opt.classList.remove("active"));
+    option.classList.add("active");
+    
+    // Update text
+    sortSelectedText.textContent = option.textContent.trim();
+    
+    // Update hidden select and trigger change
+    sortSelect.value = option.dataset.value;
+    sortSelect.dispatchEvent(new Event("change"));
+    
+    // Close menu
+    sortTrigger.classList.remove("open");
+    sortMenu.classList.remove("open");
+  });
+});
+
+sortSelect.addEventListener("change", e => {
   activeSort = e.target.value;
   applyFilters();
 });
