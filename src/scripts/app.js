@@ -447,3 +447,27 @@ window.addEventListener("scroll", () => {
 // ── INIT ──────────────────────────────────────────────────
 // Show count on page load (all cards visible by default)
 resultsCount.textContent = `Showing ${ALL_CARDS.length} dhabas`;
+
+// ── HERO BACKGROUND CAROUSEL ──────────────────────────────
+(function initHeroCarousel() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+
+  // Preload all carousel images for smoother transitions
+  slides.forEach(slide => {
+    const bgUrl = slide.style.backgroundImage.replace(/url\(['"]?/, '').replace(/['"]?\)/, '');
+    if (bgUrl) {
+      const img = new Image();
+      img.src = bgUrl;
+    }
+  });
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 3500);
+})();
+
