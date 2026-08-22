@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="author" content="Sauryaman Bisen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TripToDhaba – Discover and book the best dhabas near you. Explore top-rated local restaurants across India's highways and cities.">
+  <meta name="description"
+    content="TripToDhaba – Discover and book the best dhabas near you. Explore top-rated local restaurants across India's highways and cities.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/dhabas.css">
+  <link rel="preload" as="image" href="public/image/Dhaba%20images/a-snapshot-of-indian.jpg" fetchpriority="high">
   <title>TripToDhaba - Find the Best Dhabas Near You</title>
 </head>
 
@@ -41,6 +43,35 @@
 
   <!-- HERO SECTION -->
   <section class="hero-section" id="home">
+    <div class="hero-carousel">
+      <div class="carousel-slide active"
+        style="background-image: url('public/image/Dhaba%20images/a-snapshot-of-indian.jpg');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://media.istockphoto.com/id/1169694902/photo/assorted-indian-non-vegetarian-food-recipe-served-in-a-group-includes-chicken-curry-mutton.jpg?s=1024x1024&w=is&k=20&c=GT15kLr6dQumMORGNn8Konh6VlRIyQaasrNX1qIAnSc=');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=1024x1024&w=is&k=20&c=FJaE4fYBh5aOXfym_JUkUYKBA8s01-ogbGRi_mqrLa0=');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://media.istockphoto.com/id/1292563627/photo/assorted-south-indian-breakfast-foods-on-wooden-background-ghee-dosa-uttappam-medhu-vada.jpg?s=1024x1024&w=is&k=20&c=NmB4tx_4KY-tQCXtVVPuIZrF9-spqGNWNpNyiSL7atc=');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://media.istockphoto.com/id/638000936/photo/vegan-and-vegetarian-indian-cuisine-hot-spicy-dishes.jpg?s=1024x1024&w=is&k=20&c=gi7yptf2L35LY2nw4Y6AEcnQQ-EA26uappO2hBcKts4=');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://media.istockphoto.com/id/1143693080/photo/indian-food-and-indian-cuisine-dishes-top-view.jpg?s=1024x1024&w=is&k=20&c=B5xyyPbnPTcFxQ1piriq7aM7AjElxz1TcEHxJ1JmTzo=');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://images.unsplash.com/photo-1767114915896-ec0baace7d33?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1920&q=80');">
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </div>
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge"><i class="fa-solid fa-fire"></i> 500+ Dhabas Listed</div>
@@ -61,11 +92,11 @@
       </div>
 
       <div class="hero-tags">
-        <span class="hero-tag" data-filter="all">🍽️ All</span>
-        <span class="hero-tag" data-filter="veg">🥗 Pure Veg</span>
-        <span class="hero-tag" data-filter="non-veg">🍗 Non-Veg</span>
-        <span class="hero-tag" data-filter="snacks">🥪 Snacks</span>
-        <span class="hero-tag" data-filter="family">👨‍👩‍👧 Family</span>
+        <span class="hero-tag" data-filter="all"><i class="fa-solid fa-utensils"></i> All</span>
+        <span class="hero-tag" data-filter="veg"><i class="fa-solid fa-leaf"></i> Pure Veg</span>
+        <span class="hero-tag" data-filter="non-veg"><i class="fa-solid fa-drumstick-bite"></i> Non-Veg</span>
+        <span class="hero-tag" data-filter="snacks"><i class="fa-solid fa-burger"></i> Snacks</span>
+        <span class="hero-tag" data-filter="family"><i class="fa-solid fa-users"></i> Family</span>
       </div>
     </div>
   </section>
@@ -84,13 +115,13 @@
       </div>
       <div class="sort-group">
         <label id="sortLabelBtn"><i class="fa-solid fa-arrow-down-short-wide"></i></label>
-        
+
         <div class="custom-sort-dropdown" id="customSortDropdown">
           <div class="sort-trigger" id="sortTrigger">
             <span id="sortSelectedText">Sort: Relevance</span>
             <i class="fa-solid fa-chevron-down chevron-icon"></i>
           </div>
-          
+
           <div class="sort-menu" id="sortMenu">
             <div class="sort-option active" data-value="default">
               <i class="fa-solid fa-check check-icon"></i> Sort: Relevance
@@ -126,17 +157,10 @@
   <section class="dhaba-grid-section container" id="dhabaGrid">
 
     <!-- CARD 1 -->
-    <div class="dhaba-card"
-         data-id="1"
-         data-tags="family non-veg"
-         data-rating="4.2"
-         data-price="700"
-         data-distance="2.3"
-         data-name="Vrundavan Family Garden"
-         data-cuisine="North Indian Punjabi"
-         data-location="Ekodi Gondia"
-         data-dhaba-name="Vrundavan Family Garden"
-         data-dhaba-location="Ekodi, Gondia · ₹700 for two">
+    <div class="dhaba-card" data-id="1" data-tags="family non-veg" data-rating="4.2" data-price="700"
+      data-distance="2.3" data-name="Vrundavan Family Garden" data-cuisine="North Indian Punjabi"
+      data-location="Ekodi Gondia" data-dhaba-name="Vrundavan Family Garden"
+      data-dhaba-location="Ekodi, Gondia · ₹700 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/IMG_9704-1024x683.jpg" alt="Vrundavan Family Garden" loading="lazy">
         <span class="rating-badge">⭐ 4.2</span>
@@ -161,19 +185,11 @@
     </div>
 
     <!-- CARD 2 -->
-    <div class="dhaba-card"
-         data-id="2"
-         data-tags="snacks veg fast-food"
-         data-rating="4.0"
-         data-price="400"
-         data-distance="1.1"
-         data-name="Kesar Nasta Point"
-         data-cuisine="Snacks Fast Food"
-         data-location="Ekodi Gondia"
-         data-dhaba-name="Kesar Nasta Point"
-         data-dhaba-location="Ekodi, Gondia · ₹400 for two">
+    <div class="dhaba-card" data-id="2" data-tags="snacks veg fast-food" data-rating="4.0" data-price="400"
+      data-distance="1.1" data-name="Kesar Nasta Point" data-cuisine="Snacks Fast Food" data-location="Ekodi Gondia"
+      data-dhaba-name="Kesar Nasta Point" data-dhaba-location="Ekodi, Gondia · ₹400 for two">
       <div class="dhaba-image">
-        <img src="public/image/Dhaba images/kesar-family-dhaba-ekodi-gondia-dhaba-restaurants-6dh9pzbqtd.avif" alt="Kesar Nasta Point" loading="lazy">
+        <img src="public/image/Dhaba images/1_1_2.jpg" alt="Kesar Nasta Point" loading="lazy">
         <span class="rating-badge avg">⭐ 4.0</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="2" aria-label="Add to wishlist">
@@ -197,17 +213,9 @@
     </div>
 
     <!-- CARD 3 -->
-    <div class="dhaba-card"
-         data-id="3"
-         data-tags="family non-veg highway"
-         data-rating="4.1"
-         data-price="900"
-         data-distance="3.0"
-         data-name="Maharaja Dhaba"
-         data-cuisine="Indian Family Dining"
-         data-location="Gondia"
-         data-dhaba-name="Maharaja Dhaba"
-         data-dhaba-location="Gondia · ₹900 for two">
+    <div class="dhaba-card" data-id="3" data-tags="family non-veg highway" data-rating="4.1" data-price="900"
+      data-distance="3.0" data-name="Maharaja Dhaba" data-cuisine="Indian Family Dining" data-location="Gondia"
+      data-dhaba-name="Maharaja Dhaba" data-dhaba-location="Gondia · ₹900 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/maharaja-dhaba.webp" alt="Maharaja Dhaba" loading="lazy">
         <span class="rating-badge avg">⭐ 4.1</span>
@@ -232,17 +240,9 @@
     </div>
 
     <!-- CARD 4 -->
-    <div class="dhaba-card"
-         data-id="4"
-         data-tags="family non-veg"
-         data-rating="4.7"
-         data-price="1300"
-         data-distance="1.0"
-         data-name="The Mini Eiffel Tower"
-         data-cuisine="Family Friends Dining"
-         data-location="Gondia"
-         data-dhaba-name="The Mini Eiffel Tower"
-         data-dhaba-location="Gondia · ₹1300 for two">
+    <div class="dhaba-card" data-id="4" data-tags="family non-veg" data-rating="4.7" data-price="1300"
+      data-distance="1.0" data-name="The Mini Eiffel Tower" data-cuisine="Family Friends Dining" data-location="Gondia"
+      data-dhaba-name="The Mini Eiffel Tower" data-dhaba-location="Gondia · ₹1300 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/unnamed (1).webp" alt="The Mini Eiffel Tower" loading="lazy">
         <span class="rating-badge">⭐ 4.7</span>
@@ -267,19 +267,13 @@
     </div>
 
     <!-- CARD 5 -->
-    <div class="dhaba-card"
-         data-id="5"
-         data-tags="snacks fast-food veg"
-         data-rating="3.8"
-         data-price="250"
-         data-distance="0.8"
-         data-name="Fuel Street Laxmi Nagar"
-         data-cuisine="Street Food Snacks"
-         data-location="Laxmi Nagar Gondia"
-         data-dhaba-name="Fuel Street — Laxmi Nagar"
-         data-dhaba-location="Laxmi Nagar, Gondia · ₹250 for two">
+    <div class="dhaba-card" data-id="5" data-tags="snacks fast-food veg" data-rating="3.8" data-price="250"
+      data-distance="0.8" data-name="Fuel Street Laxmi Nagar" data-cuisine="Street Food Snacks"
+      data-location="Laxmi Nagar Gondia" data-dhaba-name="Fuel Street — Laxmi Nagar"
+      data-dhaba-location="Laxmi Nagar, Gondia · ₹250 for two">
       <div class="dhaba-image">
-        <img src="public/image/Dhaba images/fuel-street-laxmi-nagar-gondia-restaurants-l88mpmpxq1.avif" alt="Fuel Street Laxmi Nagar" loading="lazy">
+        <img src="public/image/Dhaba images/fuel-street-laxmi-nagar-gondia-restaurants-l88mpmpxq1.avif"
+          alt="Fuel Street Laxmi Nagar" loading="lazy">
         <span class="rating-badge low">⭐ 3.8</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="5" aria-label="Add to wishlist">
@@ -303,17 +297,10 @@
     </div>
 
     <!-- CARD 6 -->
-    <div class="dhaba-card"
-         data-id="6"
-         data-tags="highway non-veg veg"
-         data-rating="4.3"
-         data-price="550"
-         data-distance="5.2"
-         data-name="Surya Prasad Road Dhaba"
-         data-cuisine="Highway Dhaba Dal Roti"
-         data-location="NH-6 Surya Prasad"
-         data-dhaba-name="Surya Prasad Road Dhaba"
-         data-dhaba-location="NH-6, Surya Prasad Rd · ₹550 for two">
+    <div class="dhaba-card" data-id="6" data-tags="highway non-veg veg" data-rating="4.3" data-price="550"
+      data-distance="5.2" data-name="Surya Prasad Road Dhaba" data-cuisine="Highway Dhaba Dal Roti"
+      data-location="NH-6 Surya Prasad" data-dhaba-name="Surya Prasad Road Dhaba"
+      data-dhaba-location="NH-6, Surya Prasad Rd · ₹550 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/surya-prasad-road-.avif" alt="Surya Prasad Road Dhaba" loading="lazy">
         <span class="rating-badge">⭐ 4.3</span>
@@ -338,17 +325,9 @@
     </div>
 
     <!-- CARD 7 -->
-    <div class="dhaba-card"
-         data-id="7"
-         data-tags="non-veg highway"
-         data-rating="4.5"
-         data-price="800"
-         data-distance="2.0"
-         data-name="Dara Dhaba"
-         data-cuisine="Punjabi Butter Chicken"
-         data-location="Gondia City"
-         data-dhaba-name="Dara Dhaba"
-         data-dhaba-location="Gondia City · ₹800 for two">
+    <div class="dhaba-card" data-id="7" data-tags="non-veg highway" data-rating="4.5" data-price="800"
+      data-distance="2.0" data-name="Dara Dhaba" data-cuisine="Punjabi Butter Chicken" data-location="Gondia City"
+      data-dhaba-name="Dara Dhaba" data-dhaba-location="Gondia City · ₹800 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/dara.webp" alt="Dara Dhaba" loading="lazy">
         <span class="rating-badge">⭐ 4.5</span>
@@ -373,19 +352,12 @@
     </div>
 
     <!-- CARD 8 -->
-    <div class="dhaba-card"
-         data-id="8"
-         data-tags="veg family"
-         data-rating="4.0"
-         data-price="350"
-         data-distance="1.4"
-         data-name="Kesar Family Dhaba"
-         data-cuisine="Vegetarian Thali"
-         data-location="Ekodi Gondia"
-         data-dhaba-name="Kesar Family Dhaba"
-         data-dhaba-location="Ekodi, Gondia · ₹350 for two">
+    <div class="dhaba-card" data-id="8" data-tags="veg family" data-rating="4.0" data-price="350" data-distance="1.4"
+      data-name="Kesar Family Dhaba" data-cuisine="Vegetarian Thali" data-location="Ekodi Gondia"
+      data-dhaba-name="Kesar Family Dhaba" data-dhaba-location="Ekodi, Gondia · ₹350 for two">
       <div class="dhaba-image">
-        <img src="public/image/Dhaba images/kesar-nasta-point-ekodi-gondia.avif" alt="Kesar Family Dhaba" loading="lazy">
+        <img src="public/image/Dhaba images/kesar-nasta-point-ekodi-gondia.avif" alt="Kesar Family Dhaba"
+          loading="lazy">
         <span class="rating-badge avg">⭐ 4.0</span>
         <span class="veg-tag">Pure Veg</span>
         <button class="wishlist-btn" data-id="8" aria-label="Add to wishlist">
@@ -409,17 +381,10 @@
     </div>
 
     <!-- CARD 9 -->
-    <div class="dhaba-card"
-         data-id="9"
-         data-tags="family non-veg"
-         data-rating="4.6"
-         data-price="1100"
-         data-distance="1.7"
-         data-name="Kaizer Restaurant"
-         data-cuisine="Multi-Cuisine Continental"
-         data-location="Gondia Main Road"
-         data-dhaba-name="Kaizer Restaurant"
-         data-dhaba-location="Gondia Main Road · ₹1100 for two">
+    <div class="dhaba-card" data-id="9" data-tags="family non-veg" data-rating="4.6" data-price="1100"
+      data-distance="1.7" data-name="Kaizer Restaurant" data-cuisine="Multi-Cuisine Continental"
+      data-location="Gondia Main Road" data-dhaba-name="Kaizer Restaurant"
+      data-dhaba-location="Gondia Main Road · ₹1100 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/kaizer.jpg" alt="Kaizer Restaurant" loading="lazy">
         <span class="rating-badge">⭐ 4.6</span>
@@ -444,17 +409,10 @@
     </div>
 
     <!-- CARD 10 -->
-    <div class="dhaba-card"
-         data-id="10"
-         data-tags="highway non-veg family"
-         data-rating="4.4"
-         data-price="1200"
-         data-distance="8.1"
-         data-name="High-Res Dhaba Resort"
-         data-cuisine="Indian BBQ Tandoor"
-         data-location="Nagpur Highway"
-         data-dhaba-name="High-Res Dhaba &amp; Resort"
-         data-dhaba-location="Nagpur Highway · ₹1200 for two">
+    <div class="dhaba-card" data-id="10" data-tags="highway non-veg family" data-rating="4.4" data-price="1200"
+      data-distance="8.1" data-name="High-Res Dhaba Resort" data-cuisine="Indian BBQ Tandoor"
+      data-location="Nagpur Highway" data-dhaba-name="High-Res Dhaba &amp; Resort"
+      data-dhaba-location="Nagpur Highway · ₹1200 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/High-Res-079-1024x683.jpg" alt="High-Res Dhaba Resort" loading="lazy">
         <span class="rating-badge">⭐ 4.4</span>
@@ -479,17 +437,9 @@
     </div>
 
     <!-- CARD 11 -->
-    <div class="dhaba-card"
-         data-id="11"
-         data-tags="snacks veg highway fast-food"
-         data-rating="3.9"
-         data-price="200"
-         data-distance="3.5"
-         data-name="N7 Nasta Corner"
-         data-cuisine="Snacks Tea Breakfast"
-         data-location="NH-7 Gondia"
-         data-dhaba-name="N7 Nasta Corner"
-         data-dhaba-location="NH-7, Gondia · ₹200 for two">
+    <div class="dhaba-card" data-id="11" data-tags="snacks veg highway fast-food" data-rating="3.9" data-price="200"
+      data-distance="3.5" data-name="N7 Nasta Corner" data-cuisine="Snacks Tea Breakfast" data-location="NH-7 Gondia"
+      data-dhaba-name="N7 Nasta Corner" data-dhaba-location="NH-7, Gondia · ₹200 for two">
       <div class="dhaba-image">
         <img src="public/image/Dhaba images/n7.webp" alt="N7 Nasta Corner" loading="lazy">
         <span class="rating-badge low">⭐ 3.9</span>
@@ -515,19 +465,13 @@
     </div>
 
     <!-- CARD 12 -->
-    <div class="dhaba-card"
-         data-id="12"
-         data-tags="family non-veg"
-         data-rating="4.2"
-         data-price="950"
-         data-distance="6.3"
-         data-name="Blog Dhaba Garden"
-         data-cuisine="Family Dining Garden Seating"
-         data-location="Gondia Outskirts"
-         data-dhaba-name="Blog Dhaba &amp; Garden"
-         data-dhaba-location="Gondia Outskirts · ₹950 for two">
+    <div class="dhaba-card" data-id="12" data-tags="family non-veg" data-rating="4.2" data-price="950"
+      data-distance="6.3" data-name="Blog Dhaba Garden" data-cuisine="Family Dining Garden Seating"
+      data-location="Gondia Outskirts" data-dhaba-name="Blog Dhaba &amp; Garden"
+      data-dhaba-location="Gondia Outskirts · ₹950 for two">
       <div class="dhaba-image">
-        <img src="public/image/Dhaba images/Blog_20231130-486750586-1701366049.png" alt="Blog Dhaba Garden" loading="lazy">
+        <img src="public/image/Dhaba images/Blog_20231130-486750586-1701366049.jpg" alt="Blog Dhaba Garden"
+          loading="lazy">
         <span class="rating-badge">⭐ 4.2</span>
         <button class="wishlist-btn" data-id="12" aria-label="Add to wishlist">
           <i class="fa-regular fa-heart"></i>
@@ -616,11 +560,16 @@
             <label for="bookingTime">Time</label>
             <select id="bookingTime" required>
               <option value="">Select time</option>
-              <option>12:00 PM</option><option>12:30 PM</option>
-              <option>01:00 PM</option><option>01:30 PM</option>
-              <option>02:00 PM</option><option>07:00 PM</option>
-              <option>07:30 PM</option><option>08:00 PM</option>
-              <option>08:30 PM</option><option>09:00 PM</option>
+              <option>12:00 PM</option>
+              <option>12:30 PM</option>
+              <option>01:00 PM</option>
+              <option>01:30 PM</option>
+              <option>02:00 PM</option>
+              <option>07:00 PM</option>
+              <option>07:30 PM</option>
+              <option>08:00 PM</option>
+              <option>08:30 PM</option>
+              <option>09:00 PM</option>
             </select>
           </div>
         </div>
@@ -666,7 +615,8 @@
         <button type="submit" class="btn-book-confirm">
           <i class="fa-solid fa-paper-plane"></i> Send OTP
         </button>
-        <p class="signin-note">By continuing, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
+        <p class="signin-note">By continuing, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
+        </p>
       </form>
     </div>
   </div>
